@@ -13,23 +13,16 @@ We can get a general idea of how functions time efficiency scales by categorizin
 
     O(1) => constant time
                 |                                                          
-               V
     O(log n) => logarithmic time
                 |
-               V
     O(n)=> linear time
                 |
-               V
     O(n log n)=> linearithmic time
                 |
-               V
     O(n ^ 2) => Quadratic time
                 |
-               V
     O(n ^ 3) => cubic time
                 |
-               V
     O(2 ^ n) => exponential
                 |
-               V
     O(n!) => factorial
