@@ -12,7 +12,7 @@ We can get a general idea of how functions time efficiency scales by categorizin
 ## ORDER OF GROWTH HIERARCHY
 
     O(1) => constant time
-                |                                                          
+                |
     O(log n) => logarithmic time
                 |
     O(n)=> linear time
@@ -26,3 +26,8 @@ We can get a general idea of how functions time efficiency scales by categorizin
     O(2 ^ n) => exponential
                 |
     O(n!) => factorial
+
+## LOGARITHMS
+
+a logarithm is the power that a number needs to be raised to to get some other number
+log<sub>2<sub> 8 = 3
