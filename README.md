@@ -30,4 +30,4 @@ We can get a general idea of how functions time efficiency scales by categorizin
 ## LOGARITHMS
 
 a logarithm is the power that a number needs to be raised to to get some other number
-log<sub>2<sub> 8 = 3
+log<sub>2</sub> 8 = 3
