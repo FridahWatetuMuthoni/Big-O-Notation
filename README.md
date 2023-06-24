@@ -19,7 +19,7 @@ We can get a general idea of how functions time efficiency scales by categorizin
                 |
     O(n log n)=> linearithmic time
                 |
-    O(n ^ 2) => Quadratic time
+    O(n <sup>2</sup>) => Quadratic time
                 |
     O(n ^ 3) => cubic time
                 |
