@@ -19,7 +19,7 @@ We can get a general idea of how functions time efficiency scales by categorizin
                 |
     O(n log n)=> linearithmic time
                 |
-    O(n <sup>2</sup>) => Quadratic time
+    O(n ^ 2) => Quadratic time
                 |
     O(n ^ 3) => cubic time
                 |
@@ -29,5 +29,10 @@ We can get a general idea of how functions time efficiency scales by categorizin
 
 ## LOGARITHMS
 
-a logarithm is the power that a number needs to be raised to to get some other number
+A logarithm is the power that a number needs to be raised to to get some other number
+In computer science unless specified otherwise, we can always assume that the number
+that we want to raise to some power is 2, meaning that the base is always 2 unless specified otherwise.
 log<sub>2</sub> 8 = 3
+What is the number that we can raise 2 to to get 8 or 2 <sup>?</sup> = 8.
+the answer is 3.
+Therefore Log base 2 of 8 is 3
