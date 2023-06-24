@@ -36,3 +36,40 @@ log<sub>2</sub> 8 = 3
 What is the number that we can raise 2 to to get 8 or 2 <sup>?</sup> = 8.
 the answer is 3.
 Therefore Log base 2 of 8 is 3
+
+## MERGE SORT TIME COMPLEXITY
+
+arr = [6, 1, 23, 3]
+To understand the time complexity of mergesort we'll take an array of length 4 into consideration. We will pass this array to the mergesort function.
+And what that call to the merge sort will do is divide the array approximately in half and those halves will be passed to merge sort recursively.
+And after the arrays are done dividing , we will have arrays of length one meaning that we cant split the arrays any further. And to understand the time complexity of merge sort, we need to understand  O(log n). So as we know, in computer science, O(log n) is the same as log<sub>2</sub> n. where n is the length of our array which in our case is 4.
+
+Therefore:
+log<sub>2</sub> 4 = 2  because 2<sup>2</sup> = 4
+
+which means that for array of length 4, there will be two levels of recurssion in our recursive tree structure.
+And for each one of these levels, what we need to do is we need to touch every element of n, because we need to sort them and inorder to sort them we need to compare elements to create the merged array.
+So that means that at each level we need to merge. And this merge function needs to touch every element of n.
+Therefore, what that means is that each level has a time complexity of O(n) and there are O(log n) levels,
+Hence the time complexity is going to be O(log n) * O(n) == O(n log n)
+
+O(4 *  log 4) == O( 4 * 2 )
+4 is the number of elements to traverse while 2 is the number of recursions in the recurssion tree structure
+
+![alt text](./images/merge-sort-time-complexity.png)
+
+## FIBONACCI TIME COMPLEXITY
+
+![alt text](./images/fibonacci-time-complexity.png)
+
+## FACTORIAL TIME COMPLEXITY
+
+![alt text](./images/factorial-time-complexity-1.png)
+
+![alt text](./images/factorial-time-complexity-2.png)
+
+## COMMON MISTAKES
+
+![alt text](./images/common-mistakes-1.png)
+
+![alt text](./images/common-mistakes-2.png)
