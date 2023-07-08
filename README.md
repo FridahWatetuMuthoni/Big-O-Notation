@@ -73,3 +73,32 @@ O(4 *  log 4) == O( 4 * 2 )
 ![alt text](./images/common-mistakes-1.png)
 
 ![alt text](./images/common-mistakes-2.png)
+
+## Algorithms Analysis
+
+The functions used for algorithm analysis
+
+1. The Constant Function
+
+f(n) = c
+For some fixed constant c, such as c = 10, c = 5 or c =10. That is, for any arguement n, the constant function f(n) assigns the value c. In other words, it does not matter what the value of n is: f(n) will always be equal to the contant value c.
+Because we are most interested in integer functions, the most fundamental constant function is g(n) = 1.
+Note that any other constant function, f(n)=c, can be written as a constant time g(n). that is f(n) = cg(n) in this case.
+As simple as it is, the constant function is useful in algorithm analysis, because it characterizes the number of steps needed to do a basic operation on a computer, like adding two numbers, assigning a value to some variable, or comparing two numbers.
+2. The Logarithm Function
+
+One of the interesting and sometimes even surprising aspects of the analysis of data structures and algorithms is the ubiquitous presence of the logarithm function,  f(n) = log <sub>n</sub>, for some constant b > 1. This function is deﬁned as follows:
+x = log b n if and only if b x = n.
+By deﬁnition, log b 1 = 0. The value b is known as the base of the logarithm.
+The most common base for the logarithm function in computer science is 2, as computers store integers in binary, and because a common operation in many algorithms is to repeatedly divide an input in half. In fact, this base is so common that we will typically omit it from the notation when it is 2. That is, for us,
+logn = log 2 n.
+We note that most handheld calculators have a button marked LOG, but this is typically for calculating the logarithm base-10, not base-two.
+Computing the logarithm function exactly for any integer n involves the use of calculus, but we can use an approximation that is good enough for our pur-poses without calculus. In particular, we can easily compute the smallest integer greater than or equal to log b n (its so-called ceiling, ⌈ log b n ⌉ ). For positive integer, n, this value is equal to the number of times we can divide n by b before we get  a number less than or equal to 1. For example, the evaluation of ⌈ log 3 27 ⌉ is 3, because ((27/3)/3)/3 = 1. Likewise, ⌈ log 4 64 ⌉ is 3, because ((64/4)/4)/4 = 1, and ⌈ log 2 12 ⌉ is 4, because (((12/2)/2)/2)/2 = 0.75 ≤ 1.
+The following proposition describes several important identities that involve logarithms for any base greater than 1.
+Proposition 3.1 (Logarithm Rules): Given real numbers a > 0, b > 1, c > 0 and d > 1, we have:
+
+1. log b (ac) = log b a+log b c
+2. log b (a/c) = log b a−log b c
+3. log b (a c ) = clog b a
+4. log b a = log d a/log d b
+5. b log d a = alog d b
