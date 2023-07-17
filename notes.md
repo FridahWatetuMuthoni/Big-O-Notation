@@ -25,7 +25,7 @@ Big 0, big omega, and big theta describe the upper, lower, and tight bounds for 
 ## Space Complexity
 
 Time is not the only thing that matters in an algorithm. We might also care about the amount of memory_ or space-required by an algorithm.
-Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require 0( n) space. If we need a two-dimensional array of size nxn, this will require O( n<sup>2</sup>) space.
+Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require 0( n) space. If we need a two-dimensional array of size n x n, this will require O( n<sup>2</sup>) space.
 Stack space in recursive calls counts, too. For example, code like this would takeO(n) time andO(n) space.
 
 int sum(int n){
@@ -59,7 +59,45 @@ int pairSum(int a, int b){
 }
 There will be roughly O(n) calls to pairSum. However, those calls do not exist simultaneously on the call stack, so you only needO(1) space.
 
+## Drop the Constants
+
+It is very possible for O(N) code to run faster than 0(1) code for specific inputs. Big O just describes the rate of increase.
+For this reason, we drop the constants in runtime. An algorithm that one might have described as 0(2N) is actually O(N).
+Many people resist doing this. They will see code that has two (non-nested) for loops and continue this 0(2N). They think they're being more "precise:'They're not.
+
+example one:
+int min = Integer.MAX_VALUE;
+ int max = Integer.MIN_VALUE;
+ for (int x : array) {
+    if (x < min) min x;
+    if (x > max) max = x;
+ }
+ example two:
+int min = Integer.MAX_VALUE;
+int max = Integer.MIN_VALUE;
+for (int x : array) {
+    if(x < min) min = x;
+}
+for (int x : array) {
+    if(x > max ) max = x;
+}
+Which one is faster?The first one does one for loop and the other one does two for loops. But then, the first solution has two lines of code per for loop rather than one.
+If you're going to count the number of instructions, then you'd have to go to the assembly level and take into account that multiplication requires more instructions than addition, how the compiler would opti_ mize something, and all sorts of other details.
+This would be horrendously complicated, so don't even start going down this road. Big O allows us to express how the runtime scales. We just need to accept that it doesn't mean that O(N) is always better than O(N<sup>2</sup>)
+
 ## Drop the Non-Dominant Terms
 
 What do you do about an expression such as O( N<sup>2</sup> + N) ? That second N isn't exactly a constant. But it's not especially important.
 We already said that we drop constants. Therefore, 0(N<sup>2</sup> + N<sup>2</sup> ) would be O (N<sup>2</sup>). If we don't care about that latter <sup>2</sup> term, why would we care about N? We don't.
+You should drop the non-dominant terms.
+
+O(N 2+ N) becomesO(N2).
+O(N + log N) becomesO(N).
+0(5*2 N+ 1000N 100) becomes0(2 N).
+
+We might still have a sum in a runtime. For example, the expression0(8 2+ A) cannot be reduced (without some special knowledge of A and B).
+
+## Multi-Part Algorithms: Add vs. Multiply
+
+Suppose you have an algorithm that has two steps. When do you multiply the runtimes and when do you add them?
+This is a common source of confusion for candidates.
