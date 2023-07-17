@@ -15,7 +15,7 @@ This is what the concept of asymptotic runtime, or big O time, means. We could d
 Electronic Transfer: 0( s ), where s is the size of the file. This means that the time to transfer the file increases linearly with the size of the file. (Yes, this is a bit of a simplification, but that's okay for these purposes).
 Airplane Transfer: 0( 1) with respect to the size of the file. As the size of the file increases, it won't take any longer to get the file to your friend. The time is constant.
 No matter how big the constant is and how slow the linear increase is, linear will at some point surpass constant.
-There are many more runtimes than this. Some of the most common ones are O(log N), O(N log N), O(N), O(N 2) and 0( 2 N). There's no fixed list of possible runtimes, though.
+There are many more runtimes than this. Some of the most common ones are O(log N), O(N log N), O(N), O(<sup>2</sup>) and 0( 2<sup>N</sup>). There's no fixed list of possible runtimes, though.
 You can also have multiple variables in your runtime. For example, the time to paint a fence that's w meters wide and h meters high could be described as O(wh). If you needed p layers of paint, then you could say that the time is O(whp).
 What is the relationship between best/worst/expected case and big 0/theta/omega?
 It's easy for candidates to muddle these concepts (probably because both have some concepts of" higher': "lower" and "exactly right"), but there is no particular relationship between the concepts.
@@ -25,7 +25,7 @@ Big 0, big omega, and big theta describe the upper, lower, and tight bounds for 
 ## Space Complexity
 
 Time is not the only thing that matters in an algorithm. We might also care about the amount of memory_ or space-required by an algorithm.
-Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require 0( n) space. If we need a two-dimensional array of size nxn, this will require O( n2) space.
+Space complexity is a parallel concept to time complexity. If we need to create an array of size n, this will require 0( n) space. If we need a two-dimensional array of size nxn, this will require O( n<sup>2</sup>) space.
 Stack space in recursive calls counts, too. For example, code like this would takeO(n) time andO(n) space.
 
 int sum(int n){
@@ -61,5 +61,5 @@ There will be roughly O(n) calls to pairSum. However, those calls do not exist s
 
 ## Drop the Non-Dominant Terms
 
-What do you do about an expression such as O( N<sup>2</sup> + N)? That second N isn't exactly a constant. But it's not especially important.
-We already said that we drop constants. Therefore, 0(N<sup>2</sup> + N<sup>2</sup> ) would be O (N<sup>2</sup>). If we don't care about that latter N 2term, why would we care about N? We don't.
+What do you do about an expression such as O( N<sup>2</sup> + N) ? That second N isn't exactly a constant. But it's not especially important.
+We already said that we drop constants. Therefore, 0(N<sup>2</sup> + N<sup>2</sup> ) would be O (N<sup>2</sup>). If we don't care about that latter <sup>2</sup> term, why would we care about N? We don't.
