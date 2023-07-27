@@ -106,16 +106,16 @@ Proposition 3.1 (Logarithm Rules): Given real numbers a > 0, b > 1, c > 0 and d 
 
 1. The Product Rule
    If the Big O is the product of multiple terms, drop the constant terms
-   O(4 _ n) => O(n)
-   O(512 _ n) => O(n)
-   O(n/3) => O(n _ 1/3) => O(n)
-   O(5 _ n _ n) => O(n _ n) => O(n^2)
+   1. O(4 _ n) => O(n)
+   2. O(512 _ n) => O(n)
+   3. O(n/3) => O(n _ 1/3) => O(n)
+   4. O(5 _ n _ n) => O(n _ n) => O(n^2)
 
 2. The Sum Rule
    If the Big O is the sum of multiple terms, only keep the largest term, drop the rest
    Drop all constants except one or zero term from both sides to get rid off any non dominant
-   O(n + 1000) => O(n)
-   O(n^2 + n) => O(n^2)
-   O(n + 500 + n^3 + n^2) => O(n^3)
-   O(5n^2+ 100n + 17) => O(n^2 + n + 1) => O(n^2)
-   O((n/3)^6 + 10n) => O((n \* 1/3)^6 + 10n) => O(n^6 + n) => O(n^6)
+   1. O(n + 1000) => O(n)
+   2. O(n^2 + n) => O(n^2)
+   3. O(n + 500 + n^3 + n^2) => O(n^3)
+   4. O(5n^2+ 100n + 17) => O(n^2 + n + 1) => O(n^2)
+   5. O((n/3)^6 + 10n) => O((n \* 1/3)^6 + 10n) => O(n^6 + n) => O(n^6)
