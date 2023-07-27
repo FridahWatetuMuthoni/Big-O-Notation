@@ -1,0 +1,1 @@
+newArray.push(array[i])
