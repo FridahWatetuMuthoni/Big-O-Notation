@@ -27,6 +27,16 @@ We can get a general idea of how functions time efficiency scales by categorizin
                 |
     O(n!) => factorial
 
+## N/B
+
+when i enconter  a loop where 2 is subtracted from n everytime the loop runs the runtime is:
+O(n/2) => O(n * 1/2) => O(n)
+So subtrating 3 is:
+O(n/3) => O(n * 1/3) => O(n)
+
+But when we encounter an algorithim where n is continuously divided by 2. thats a log 2
+Therefore when n is countinouously divided by 3 , thats a log 3
+
 ## LOGARITHMS
 
 A logarithm is the power that a number needs to be raised to to get some other number
@@ -114,8 +124,8 @@ Proposition 3.1 (Logarithm Rules): Given real numbers a > 0, b > 1, c > 0 and d 
 2. The Sum Rule
    If the Big O is the sum of multiple terms, only keep the largest term, drop the rest
    Drop all constants except one or zero term from both sides to get rid off any non dominant
-   1. O(n + 1000) => O(n)
-   2. O(n^2 + n) => O(n^2)
-   3. O(n + 500 + n^3 + n^2) => O(n^3)
-   4. O(5n^2+ 100n + 17) => O(n^2 + n + 1) => O(n^2)
-   5. O((n/3)^6 + 10n) => O((n \* 1/3)^6 + 10n) => O(n^6 + n) => O(n^6)
+   i. O(n + 1000) => O(n)
+   ii. O(n^2 + n) => O(n^2)
+   iii. O(n + 500 + n^3 + n^2) => O(n^3)
+   iv. O(5n^2+ 100n + 17) => O(n^2 + n + 1) => O(n^2)
+   v. O((n/3)^6 + 10n) => O((n \* 1/3)^6 + 10n) => O(n^6 + n) => O(n^6)

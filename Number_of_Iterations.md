@@ -77,5 +77,3 @@ Let's break down the process of solving the inequality k * (k + 1) / 2 > n step 
    Therefore, the largest integer value of k that satisfies the inequality is: k = ceil((-1 + sqrt(1 + 8n)) / 2).
 
 12. Finally, the time complexity of the given function is O(ceil((-1 + sqrt(1 + 8n)) / 2)), or simply O(sqrt(n)), as we can ignore the ceiling function and constant factors in asymptotic analysis.
-
-I hope this explanation clarifies the process of solving the inequality step by step!
